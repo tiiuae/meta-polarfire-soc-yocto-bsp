@@ -68,6 +68,10 @@ IMAGE_INSTALL = "\
     evtest devmem2 iperf3 memtester lmbench \
     tcpdump \
     iw \
+    openssl \
+    wpa-supplicant \
+    hostapd \
+    batctl \
     libudev \
     nano \
     nfs-utils-client \
