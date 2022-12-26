@@ -11,6 +11,8 @@ SRC_URI = " \
 
 SRC_URI:append:icicle-kit-es = " file://defconfig \
 				 file://0001-Custom-PCIe-fix-for-ICICLE-board-device-tree.patch \
+                                 file://0002-defconfig-Enable-wireless-comms-configuration.patch \
+                                 file://0003-defconfig-Enable-batman-adv-kernel-configuration.patch \
 "
 SRC_URI:append:icicle-kit-es-amp = " file://defconfig"
 

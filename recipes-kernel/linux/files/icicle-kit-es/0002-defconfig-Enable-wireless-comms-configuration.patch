@@ -1,0 +1,52 @@
+From 1844bce960e71ae6116c23e925fa35736ee1b6e8 Mon Sep 17 00:00:00 2001
+From: Govind Singh <govind.sk85@gmail.com>
+Date: Fri, 25 Nov 2022 10:47:04 +0400
+Subject: [PATCH 1/2] defconfig: Enable wireless comms configuration
+
+Add support for ath10k and ath9k PCI based wireless
+configuration along with mesh  support.
+
+Signed-off-by: Govind Singh <govind.sk85@gmail.com>
+---
+ arch/riscv/configs/icicle_kit_defconfig | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+diff --git a/arch/riscv/configs/icicle_kit_defconfig b/arch/riscv/configs/icicle_kit_defconfig
+index e5d62add54fe..e69b1f5bf78d 100644
+--- a/arch/riscv/configs/icicle_kit_defconfig
++++ b/arch/riscv/configs/icicle_kit_defconfig
+@@ -36,6 +36,9 @@ CONFIG_IP_PNP_DHCP=y
+ CONFIG_IP_PNP_BOOTP=y
+ CONFIG_IP_PNP_RARP=y
+ CONFIG_NETLINK_DIAG=y
++CONFIG_CFG80211=y
++CONFIG_MAC80211=y
++CONFIG_MAC80211_MESH=y
+ CONFIG_NET_9P=y
+ CONFIG_NET_9P_VIRTIO=y
+ 
+@@ -67,6 +70,14 @@ CONFIG_MACB=y
+ CONFIG_E1000E=y
+ CONFIG_R8169=y
+ CONFIG_MICROSEMI_PHY=y
++CONFIG_ATH9K=y
++CONFIG_ATH9K_DEBUGFS=y
++CONFIG_ATH9K_COMMON_SPECTRAL=y
++CONFIG_ATH10K=y
++CONFIG_ATH10K_PCI=y
++CONFIG_ATH10K_DEBUG=y
++CONFIG_ATH10K_DEBUGFS=y
++CONFIG_ATH10K_SPECTRAL=y
+ CONFIG_INPUT_MOUSEDEV=y
+ CONFIG_SERIAL_8250=y
+ CONFIG_SERIAL_8250_CONSOLE=y
+@@ -201,4 +212,4 @@ CONFIG_IIO_SW_DEVICE=y
+ CONFIG_IIO_SW_TRIGGER=y
+ CONFIG_IIO_TRIGGERED_BUFFER=y
+ CONFIG_IIO_TRIGGER=y
+-CONFIG_IIO=y
+\ No newline at end of file
++CONFIG_IIO=y
+-- 
+2.25.1
+

@@ -1,0 +1,38 @@
+From e6e7b7ded588328279b02bdb279c2e2e8bdeb612 Mon Sep 17 00:00:00 2001
+From: Govind Singh <govind.sk85@gmail.com>
+Date: Tue, 29 Nov 2022 17:30:12 +0400
+Subject: [PATCH] defconfig: Enable batman-adv kernel configuration
+
+Signed-off-by: Govind Singh <govind.sk85@gmail.com>
+---
+ arch/riscv/configs/icicle_kit_defconfig | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/arch/riscv/configs/icicle_kit_defconfig b/arch/riscv/configs/icicle_kit_defconfig
+index e69b1f5bf78d..37e4e77a2405 100644
+--- a/arch/riscv/configs/icicle_kit_defconfig
++++ b/arch/riscv/configs/icicle_kit_defconfig
+@@ -152,6 +152,7 @@ CONFIG_CRYPTO_USER_API_HASH=y
+ CONFIG_CRYPTO_DEV_VIRTIO=y
+ CONFIG_PRINTK_TIME=y
+ CONFIG_DEBUG_FS=y
++CONFIG_DEBUG_FS_ALLOW_ALL=y
+ CONFIG_DEBUG_PAGEALLOC=y
+ CONFIG_SCHED_STACK_END_CHECK=y
+ CONFIG_DEBUG_VM=y
+@@ -213,3 +214,12 @@ CONFIG_IIO_SW_TRIGGER=y
+ CONFIG_IIO_TRIGGERED_BUFFER=y
+ CONFIG_IIO_TRIGGER=y
+ CONFIG_IIO=y
++
++CONFIG_BATMAN_ADV=y
++CONFIG_BATMAN_ADV_BATMAN_V=y
++CONFIG_BATMAN_ADV_BLA=y
++CONFIG_BATMAN_ADV_DAT=y
++# CONFIG_BATMAN_ADV_NC is not set
++CONFIG_BATMAN_ADV_MCAST=y
++# CONFIG_BATMAN_ADV_DEBUG is not set
++CONFIG_BATMAN_ADV_SYSFS=y
+-- 
+2.25.1
+
