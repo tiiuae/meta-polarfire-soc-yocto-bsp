@@ -9,7 +9,9 @@ SRC_URI = " \
     git://github.com/polarfire-soc/linux.git;protocol=https;branch=${BRANCH} \
 "
 
-SRC_URI:append:icicle-kit-es = " file://defconfig"
+SRC_URI:append:icicle-kit-es = " file://defconfig \
+				 file://0001-Custom-PCIe-fix-for-ICICLE-board-device-tree.patch \
+"
 SRC_URI:append:icicle-kit-es-amp = " file://defconfig"
 
 
