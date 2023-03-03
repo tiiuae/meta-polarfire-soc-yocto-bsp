@@ -61,6 +61,10 @@ IMAGE_INSTALL = "\
     glib-2.0 \
     tcpdump \
     iw \
+    openssl \
+    wpa-supplicant \
+    hostapd \
+    batctl \
     libudev \
     nano \
     nfs-utils-client \
